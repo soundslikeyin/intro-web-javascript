@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript Exercise 1</title>
+</head>
+<body>
+    <h1>Hello <span id="name"></span>!</h1>
+    <button id="changeNameBtn">Change your name!</button>
+
+    <script>
+        document.getElementById("name").innerText = "Name";
+        
+        document.getElementById("changeNameBtn").addEventListener("click", changeName);
+
+        function changeName() {
+            let newName;
+            newName = window.prompt("What is your name?");
+            if (newName == null || newName == "") {
+             window.alert("You do not want to be known?");
+            }
+             else {
+                document.getElementById("name").innerText = newName;
+             }
+        }
+
+    </script>
+</body>
+</html>
